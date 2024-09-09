@@ -1,6 +1,5 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.2.4"
     id("io.spring.dependency-management") version "1.1.5"
 }
 
@@ -29,7 +28,6 @@ dependencyManagement {
 
 subprojects {
     apply(plugin = "java")
-    apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
 
     java {
