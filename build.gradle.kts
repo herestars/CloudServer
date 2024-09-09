@@ -68,11 +68,6 @@ subprojects {
     dependencies {
         implementation(platform("com.alibaba.cloud:spring-cloud-alibaba-dependencies:$alibabaVersion"))
         implementation(platform("org.apache.dubbo:dubbo-bom:3.3.0-beta.2"))
-        compileOnly("org.projectlombok:lombok")
-        developmentOnly("org.springframework.boot:spring-boot-devtools")
-        annotationProcessor("org.projectlombok:lombok")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-        testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     }
 
     tasks.withType<Test> {
