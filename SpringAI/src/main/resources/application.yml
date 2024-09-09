@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    ai:
+      tongyi:
+        api-key: ${AI_API_KEY:api-key}
+dubbo:
+  application:
+    name: spring-ai
+    metadata-service-protocol: dubbo
+  protocol:
+    name: tri
+    port: -1
+  config-center:
+    namespace: ${CONFIG_CENTER_NAMESPACE:dev}
+    group: ${CONFIG_CENTER_GROUP:AI_GROUP}
+    username: ${CONFIG_CENTER_USERNAME:nacos}
+    password: ${CONFIG_CENTER_PASSWORD:nacos}
+    address: ${CONFIG_CENTER_ADDRESS:nacos://127.0.0.1:8848}
