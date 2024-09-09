@@ -1,6 +1,7 @@
 plugins {
     java
     id("io.spring.dependency-management") version "1.1.5"
+    `maven-publish`
 }
 
 val alibabaVersion = "2023.0.1.0"
@@ -61,6 +62,14 @@ subprojects {
             url = uri("https://maven.aliyun.com/repository/spring/")
         }
         mavenLocal()
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/herestars/CloudServer")
+            credentials {
+                username = System.getenv("MY_GITHUB_ACTOR")
+                password = System.getenv("MY_GITHUB_TOKEN")
+            }
+        }
     }
 
     dependencies {
