@@ -2,7 +2,7 @@ spring:
   cloud:
     ai:
       tongyi:
-        api-key: ${AI_API_KEY:sk-1e1895ea39be48a682fef3cfd948904d}
+        api-key: ${AI_API_KEY:api}
 dubbo:
   application:
     name: spring-ai
@@ -14,5 +14,5 @@ dubbo:
     namespace: ${CONFIG_CENTER_NAMESPACE:68a980d3-b835-4ab1-904a-a952afee43b5}
     group: ${CONFIG_CENTER_GROUP:AI_GROUP}
     username: ${CONFIG_CENTER_USERNAME:nacos}
-    password: ${CONFIG_CENTER_PASSWORD:12As4578}
+    password: ${CONFIG_CENTER_PASSWORD:nacos}
     address: ${CONFIG_CENTER_ADDRESS:nacos://127.0.0.1:8848}
